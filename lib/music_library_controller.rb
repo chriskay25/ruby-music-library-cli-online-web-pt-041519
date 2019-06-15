@@ -65,40 +65,12 @@ class MusicLibraryController
     puts "Which song number would you like to play?"
     user_input = gets 
     ind = user_input - 1
-    list_songs[ind]
+    puts "Playing #{list_songs[ind]}"
     
   end 
 
   
 end 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
