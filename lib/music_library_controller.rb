@@ -33,8 +33,8 @@ class MusicLibraryController
     #   count += 1 
     # end 
     songs = Song.all.collect {|song| song}
-    binding.pry 
     songs.sort {|a, b| a.name <=> b.name}
+    binding.pry
   end 
 
   
