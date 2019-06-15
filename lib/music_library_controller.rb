@@ -33,10 +33,11 @@ class MusicLibraryController
     # end 
     songs = Song.all.collect {|song| song}
     songs.sort! {|a, b| a.name <=> b.name}
+    binding.pry 
     songs.each do |song|
       puts "#{count}. #{song.name}"
     end 
-    binding.pry
+    
   end 
 
   
