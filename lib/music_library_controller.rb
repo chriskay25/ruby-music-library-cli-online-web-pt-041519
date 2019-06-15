@@ -53,7 +53,10 @@ class MusicLibraryController
   end 
     
   def list_songs_by_genre 
-    puts "Please enter the na"
+    puts "Please enter the name of a genre:"
+    user_input = gets 
+    genre_songs = Song.all.select {|song| song.genre.name == user_input} 
+    genre_songs.sort 
 
   
 end 
