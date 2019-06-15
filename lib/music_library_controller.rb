@@ -26,14 +26,16 @@ class MusicLibraryController
   end 
   
   def list_songs 
-    # count = 1 
-    # importer_alphabetized = @music.sort {|a, b| a.name <=> b.name}
+    count = 1 
     # @music.each do |song| 
     #   puts "#{count}. #{song}"
     #   count += 1 
     # end 
     songs = Song.all.collect {|song| song}
     songs.sort! {|a, b| a.name <=> b.name}
+    songs.each do |song|
+      puts "#{count}. #{song.name}"
+    end 
     binding.pry
   end 
 
