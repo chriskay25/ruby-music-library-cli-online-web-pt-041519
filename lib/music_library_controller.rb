@@ -73,7 +73,8 @@ class MusicLibraryController
     Song.all.sort {|a, b| a.name <=> b.name}.each.with_index(1) do |song, index|
       if user_input.to_i == index 
         puts "Playing #{song.name} by #{song.artist.name}" 
-      end 
+      end  
+    end 
   end 
 
   
