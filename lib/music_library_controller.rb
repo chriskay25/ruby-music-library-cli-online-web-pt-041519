@@ -5,7 +5,7 @@ class MusicLibraryController
   def initialize(path = "./db/mp3s") 
     @music = MusicImporter.new(path).import
       # returns array of ["artist - song - genre.mp3", "artist - song...."]
-    @music.each {|file| file.chomp!(".mp3")}
+    # @music.each {|file| file.chomp!(".mp3")}
       #removes the .mp3 from the genres to make the array easier to work with
   end 
   
