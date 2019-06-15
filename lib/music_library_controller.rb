@@ -46,6 +46,8 @@ class MusicLibraryController
   def list_songs_by_artist
     puts "Please enter the name of an artist:"
     user_input = gets 
+    artist_songs = Song.all.select {|song| song.artist == user_input}
+    binding.pry
   end 
     
 
