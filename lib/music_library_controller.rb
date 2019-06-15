@@ -71,9 +71,7 @@ class MusicLibraryController
     puts "Which song number would you like to play?"
     user_input = gets 
     Song.all.sort {|a, b| a.name <=> b.name}.each.with_index(1) do |song, index|
-      
-        puts "Playing #{song.name} by #{song.artist.name}" if user_input.to_i == index 
-      end  
+      puts "Playing #{song.name} by #{song.artist.name}" if user_input.to_i == index 
     end 
   end 
 
